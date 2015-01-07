@@ -1,0 +1,59 @@
+
+<%= form_for(@master) do |f| -%>
+  <% if @master.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@master.errors.count, "error") %> prohibited this description from being saved:</h2>
+      <ul>
+      <% @master.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="form-group">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, :id => 'f1', :required => true %>
+  </div>
+<%#=  params.inspect %>
+  <div class="form-group">
+    <%= f.label :description %><br>
+    <%= f.text_area :description, :required => true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var f1 = new LiveValidation('f1');
+f1.add( Validate.Presence );
+  
+});
+$('#f1').change(function() {
+  var name = $("#f1").val();
+  //alert(name);
+  
+  $.ajax({
+    url: 'check_name', format: 'js',
+    data: {name: name},
+    type: 'get',
+    success: function(e){
+        
+      if(e<1)
+        alert("don't exist");
+      else
+        alert("exist");
+  }
+    ,
+    error: function(e)
+    {
+      alert("dont exist");
+    }
+  });
+});
+
+</script>

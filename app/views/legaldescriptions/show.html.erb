@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ldescription:</strong>
+  <%= @legaldescription.legalmaster.lmname %>
+</p>
+<p>
+  <strong>Legal Country:</strong>
+  <%= @legaldescription.legalcountry.countryname %>
+</p>
+<p>
+  <strong>Ldesc createdby:</strong>
+  <%= @legaldescription.ldesc_createdby %>
+</p>
+
+<p>
+  <strong>Ldesc modifiedby:</strong>
+  <%= @legaldescription.ldesc_modifiedby %>
+</p>
+
+
+<%= link_to 'Edit', edit_legaldescription_path(@legaldescription) %> |
+<%= link_to 'Back', legaldescriptions_path %>
