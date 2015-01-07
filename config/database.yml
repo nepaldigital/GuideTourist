@@ -10,6 +10,11 @@ default: &default
   timeout: 5000
 
 development:
+  adapter: mysql
+  database: dcrko1dv3askp5
+  username: ahrtmjcsstdtgo
+  password: 4bA5HTd7RmohVZ34ddLricEf_w
+  host: ec2-54-83-33-196.compute-1.amazonaws.com
   <<: *default
   database: db/development.sqlite3
 
@@ -17,6 +22,11 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
+adapter: mysql
+  database: dcrko1dv3askp5
+  username: ahrtmjcsstdtgo
+  password: 4bA5HTd7RmohVZ34ddLricEf_w
+  host: ec2-54-83-33-196.compute-1.amazonaws.com
   <<: *default
   database: db/test.sqlite3
 
