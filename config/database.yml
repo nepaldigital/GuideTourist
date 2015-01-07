@@ -5,9 +5,13 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
-  pool: 5
-  timeout: 5000
+  adapter: pg
+  database: dcrko1dv3askp5
+  username: ahrtmjcsstdtgo
+  password: 4bA5HTd7RmohVZ34ddLricEf_w
+  host: ec2-54-83-33-196.compute-1.amazonaws.com
+  port: 5432
+  url: postgres://ahrtmjcsstdtgo:4bA5HTd7RmohVZ34ddLricEf_w@ec2-54-83-33-196.compute-1.amazonaws.com:5432/dcrko1dv3askp5
 
 development:
   adapter: pg
@@ -15,6 +19,9 @@ development:
   username: ahrtmjcsstdtgo
   password: 4bA5HTd7RmohVZ34ddLricEf_w
   host: ec2-54-83-33-196.compute-1.amazonaws.com
+  port: 5432
+  url: postgres://ahrtmjcsstdtgo:4bA5HTd7RmohVZ34ddLricEf_w@ec2-54-83-33-196.compute-1.amazonaws.com:5432/dcrko1dv3askp5
+
   
 
 # Warning: The database defined as "test" will be erased and
@@ -26,7 +33,9 @@ adapter: pg
   username: ahrtmjcsstdtgo
   password: 4bA5HTd7RmohVZ34ddLricEf_w
   host: ec2-54-83-33-196.compute-1.amazonaws.com
-  
+  port: 5432
+  url: postgres://ahrtmjcsstdtgo:4bA5HTd7RmohVZ34ddLricEf_w@ec2-54-83-33-196.compute-1.amazonaws.com:5432/dcrko1dv3askp5
+
 
 production:
   <<: *default
@@ -35,3 +44,5 @@ production:
   username: ahrtmjcsstdtgo
   password: 4bA5HTd7RmohVZ34ddLricEf_w
   host: ec2-54-83-33-196.compute-1.amazonaws.com
+  port: 5432
+  url: postgres://ahrtmjcsstdtgo:4bA5HTd7RmohVZ34ddLricEf_w@ec2-54-83-33-196.compute-1.amazonaws.com:5432/dcrko1dv3askp5
